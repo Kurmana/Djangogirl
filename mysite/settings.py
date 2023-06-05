@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-eq&ju=2mx)0zh!*$vm(r=zn5=&sq5h9i#zsx_ox+)8fe&6ev5f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -54,13 +54,13 @@ ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.templates.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.templates.context_processors.debug',
-                'django.templates.context_processors.request',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -116,7 +116,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
